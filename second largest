@@ -1,0 +1,47 @@
+//1. Write a program to find the second largest element in an array
+package program;
+
+public class Assi1 {
+	
+		public static int large(int[] a)
+		{
+			int temp=0;
+			
+			for(int i=0;i<a.length;i++)
+			{
+				for(int j=i+1;j<a.length;j++)
+				{
+					if(a[i]<a[j])
+					{
+						temp=a[i];
+						a[i]=a[j];
+						a[j]=temp;
+					}
+				}
+			}
+			int greatest=a[0];
+			int ans=0;
+			for(int i=1;i<a.length;i++) {
+				if(a[i]<greatest) {
+				  ans=a[i];	
+				  break;
+				}
+			}
+			return ans;
+				
+			
+		}
+		
+		
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			int[]arr= {7,3,6,2,4,8,8};
+			
+			int Secondlargest=large(arr);
+			
+			System.out.print("Second largest elemnt is:"+Secondlargest);
+
+		}
+
+	}
+
