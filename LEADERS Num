@@ -1,0 +1,25 @@
+//3. Write a program to print all the LEADERS in the array. Note: An element is leader if it is greater than all the elements to its right side
+package program;
+
+public class Assi3 {
+	
+	public static void main(String[] args) {
+		
+	
+	  int[] a= {8,3,7,4,9,5,6};
+	  
+	   int n=a.length;
+	   
+	   int rm=arr[n-1];
+	   
+	   System.out.print(rm+" ");
+	
+	for(int i=n-2;i>=0;i--) {
+		if(a[i]>rm) {
+			rm=a[i];
+			System.out.print(rm+" ");			
+		}
+	}
+
+	}
+}
