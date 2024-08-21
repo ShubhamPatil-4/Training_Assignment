@@ -10,7 +10,7 @@ public class Assi3 {
 	  
 	   int n=a.length;
 	   
-	   int rm=arr[n-1];
+	   int rm=a[n-1];
 	   
 	   System.out.print(rm+" ");
 	
