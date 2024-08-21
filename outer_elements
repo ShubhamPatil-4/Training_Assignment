@@ -1,0 +1,58 @@
+4. Write a program to display outer elements of a matrix. i.e 2d array of size 4 * 4. For example, in the matrix
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+You will print 1, 2, 3, 4, 5, 8, 9, 12, 13, 14, 15, 16
+package program;
+
+public class outer_elements {
+		
+			public static void sort(int[] arr) {
+				
+
+				 for(int i=0;i<arr.length-1;i++){ 
+			           
+			         for(int j=0;j<arr.length-1-i;j++){
+			        if(arr[j]>arr[j+1]){
+			            int temp=arr[j];
+			            arr[j]=arr[j+1];
+			            arr[j+1]=temp;
+			            
+			        }
+			        
+			        }	          
+			       }	
+			}
+			
+			
+			
+		
+			public static void main(String[] args) {
+				
+		 int[][] matrix= {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+		 
+		 for (int i = 0; i < 4; i++) {
+		     System.out.print(matrix[0][i] + " ");
+		 }
+		 
+
+		
+		 for (int i = 1; i < 4; i++) {
+		     System.out.print(matrix[i][3] + " ");
+		 }
+
+	
+		 for (int i = 3; i >= 0; i--) {
+		     System.out.print(matrix[3][i] + " ");
+		 }
+
+		
+		 for (int i =  2; i > 0; i--) {
+		     System.out.print(matrix[i][0] + " ");
+		 }
+		 
+
+	}
+
+}
